@@ -33,3 +33,4 @@ button.onclick = function (){
     nodoPagina.appendChild(espacioTexto)
 
     */
+   
