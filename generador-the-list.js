@@ -22,7 +22,6 @@ console.log("Hola");
 
 // console.log(tituloRandom(headlines[Number]))
 
-
 const button = document.querySelector("#generador")
 
 button.onclick = function (){
@@ -34,11 +33,16 @@ button.onclick = function (){
     let mostrar = console.log(headlines[aleatorios].innerText);
     let mostrarNumero = headlines[aleatorios].innerText
 
-    while (Number (mostrarNumero) === Number(mostrar)){
-      document.querySelector(".oculto").className = " "; 
-      const nodoDiv = document.querySelector("#headline");
-      const texto = document.createTextNode(mostrar);
-      document.querySelector("#headline").appendChild(texto)
+  const nodoPagina = document.querySelector('body');
+  const elParrafo = document.createElement('div')
+  const nodoTexto = document.createTextNode(mostrar); 
+
+    if (Number(mostrarNumero) === Number(mostrar)){
+      elParrafo.appendChild(nodoTexto);
+      nodoPagina.appendChild(elParrafo);
+    mostrar.className = "frase"; 
+  
+
     }
 }
 
