@@ -35,15 +35,9 @@ button.onclick = function (){
 
   const nodoPagina = document.querySelector('body');
   const elParrafo = document.createElement('div')
-  const nodoTexto = document.createTextNode(mostrar); 
-
-    if (Number(mostrarNumero) === Number(mostrar)){
+  const nodoTexto = document.createTextNode(mostrarNumero); 
+  nodoPagina.appendChild(elParrafo);
       elParrafo.appendChild(nodoTexto);
-      nodoPagina.appendChild(elParrafo);
-    mostrar.className = "frase"; 
-  
-
-    }
 }
 
 /*
