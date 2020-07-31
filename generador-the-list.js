@@ -33,12 +33,20 @@ button.onclick = function (){
     let mostrar = console.log(headlines[aleatorios].innerText);
     let mostrarNumero = headlines[aleatorios].innerText
 
-  const nodoPagina = document.querySelector('body');
-  const elParrafo = document.createElement('div')
-  const nodoTexto = document.createTextNode(mostrarNumero); 
+  let nodoPagina = document.querySelector('body');
+  let elParrafo = document.createElement('div')
+  let nodoTexto = document.createTextNode(mostrarNumero); 
   nodoPagina.appendChild(elParrafo);
       elParrafo.appendChild(nodoTexto);
+      nodoTexto.setAttribute("id", "parrafo")
 }
+
+const limpiar = document.querySelector("#limpiar")
+
+limpiar.onclick = function(){
+  document.getElementById("parrafo").reset();
+  }
+
 
 /*
 const nuevoParrafo = document.createElement('p');
