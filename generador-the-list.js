@@ -39,9 +39,11 @@ button.onclick = function (){
 
 const limpiar = document.querySelector("#limpiar")
 
-limpiar.onclick = function reFresh(){
-location.reload(true)
-}
+limpiar.onclick = reFresh;
+
+function reFresh(){
+  location.reload(true)
+  }
 
 // Esta función recarga la página. Está vinculada al botón Reset.
 
